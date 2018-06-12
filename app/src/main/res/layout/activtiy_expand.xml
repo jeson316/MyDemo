@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/hello" />
+
+    <ExpandableListView
+        android:id="@+id/exp_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
+
+    <!--android:childDivider:指定各组内子类表项之间的分隔条 注：图片不会完全显示，分离子列表项的是一条直线-->
+    <!--android:childIndicator:显示在子列表旁边的Drawable对象  注：可以是一个图片-->
+    <!--android:childIndicatorLeft:子列表项指示符的左边约束位置-->
+    <!--注：即从左端0位置开始计数，比如，假设指示符是一个图标，给定这个属性值为3dip，则表示从左端起3dip开始显示此图标-->
+    <!--android:childIndicatorRight:子列表项指示符的右边约束位置   注：表示右端到什么位置结束-->
+    <!--android:groupIndicator:显示在组列表旁边的Drawable对象   注：可以是一个图片。-->
+    <!--android:indicatorLeft:组列表项指示器的左边约束位置  注：表示左端从什么位置开始。-->
+    <!--android:indicatorRight:组列表项指示器的右边约束位置   注：表示右端到什么位置结束。-->

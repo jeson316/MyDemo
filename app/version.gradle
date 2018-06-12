@@ -1,0 +1,12 @@
+//定义需要的编译版本、支持包版本
+ext {
+    compileSdk = 26
+    buildToolSdk = "26.0.1"
+    supportSdk = '26.0.1'
+}
+
+//定义app版本
+ext {
+    appVersonName = "1.0"
+    appVersonCode = 1
+}

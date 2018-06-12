@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MyDemo</string>
+    <string name="hello">Hello,every body ..You are supper!</string>
+
+    <string name="item_01">wo shi 01</string>
+    <string name="item_02">wo shi 02</string>
+    <string name="item_03">wo shi 03</string>
+    <string name="item_04">wo shi 04</string>
+    <string name="item_05">wo shi 05</string>
+    <string name="item_06">wo shi 06</string>
+    <string name="checked">CHECKED!!!</string>
+
+
+    <!--lable-->
+    <string name="lable_okhttp">okhttp</string>
+    <string name="but_quiz_true">true</string>
+    <string name="but_quiz_false">false</string>
+
+</resources>

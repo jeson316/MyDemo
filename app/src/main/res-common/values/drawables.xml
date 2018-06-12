@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ic_camera" type="drawable">@android:drawable/ic_menu_camera</item>
+    <item name="ic_gallery" type="drawable">@android:drawable/ic_menu_gallery</item>
+    <item name="ic_mylocation" type="drawable">@android:drawable/ic_menu_mylocation</item>
+    <item name="ic_tody" type="drawable">@android:drawable/ic_menu_today</item>
+    <item name="ic_search" type="drawable">@android:drawable/ic_menu_search</item>
+    <item name="ic_send" type="drawable">@android:drawable/ic_menu_send</item>
+    <item name="ic_share" type="drawable">@android:drawable/ic_menu_share</item>
+    <item name="ic_edit" type="drawable">@android:drawable/ic_menu_edit</item>
+
+
+</resources>
