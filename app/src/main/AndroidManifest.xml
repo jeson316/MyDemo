@@ -30,7 +30,11 @@
             android:label="@string/lable_okhttp" />
         <activity android:name=".activites.SearchViewActivity" />
         <activity android:name=".savestatus.StatusStoryActivity" />
-        <activity android:name=".quiz.QuizActivity"></activity>
+
+        <!--配置持久化属性-->
+        <activity
+            android:name=".quiz.QuizActivity"
+            android:persistableMode="persistAcrossReboots" />
     </application>
 
 </manifest>

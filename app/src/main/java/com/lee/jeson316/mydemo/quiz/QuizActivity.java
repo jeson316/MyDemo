@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
@@ -14,6 +15,10 @@ import android.widget.Toast;
 import com.lee.jeson316.mydemo.R;
 
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private static final String TAG = "QuizActivity";
+    private static final String KEY_INDEX = "index";
+
     private Button mButtonTrue, mButtonFalse, mButtonNext, mButtonPrev;
     private TextView mTextViewShow;
     private int numPostion;
@@ -25,18 +30,34 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             new Questions(R.string.question_americas, true),
             new Questions(R.string.question_asia, true)
     };
-    private Questions q = ques[0];
+    private Questions q;
 
     public static Intent createInstance(Context context) {
         return new Intent(context, QuizActivity.class);
     }
 
+    //该方法是安卓5.0开始增加，更能保证activity在某些情况下的数据保存；
+    // 如果需要保持持久话数据，需要manifest对应的activity里添加android:persistableMode="persistAcrossReboots" 属性；
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
+        super.onCreate(savedInstanceState, persistentState);
+        if (savedInstanceState != null) {
+            numPostion = savedInstanceState.getInt(KEY_INDEX, 0);
+        }
+        setContentView(R.layout.activity_quiz);
+        initData();
+        initUI();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (savedInstanceState != null) {
+            numPostion = savedInstanceState.getInt(KEY_INDEX, 0);
+        }
         setContentView(R.layout.activity_quiz);
-        initUI();
         initData();
+        initUI();
     }
 
     private void initUI() {
@@ -54,7 +75,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initData() {
-
+        q = ques[numPostion];
     }
 
     @Override
@@ -108,8 +129,12 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
-        if (outState != null) {
+        outState.putInt(KEY_INDEX, numPostion);
+    }
 
-        }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(KEY_INDEX, numPostion);
     }
 }
