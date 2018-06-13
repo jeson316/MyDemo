@@ -30,7 +30,7 @@
             android:label="@string/lable_okhttp" />
         <activity android:name=".activites.SearchViewActivity" />
         <activity android:name=".savestatus.StatusStoryActivity" />
-        <activity android:name=".geoquiz.QuizActivity"></activity>
+        <activity android:name=".quiz.QuizActivity"></activity>
     </application>
 
 </manifest>

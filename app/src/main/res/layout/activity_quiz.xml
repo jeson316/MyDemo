@@ -6,12 +6,15 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".geoquiz.QuizActivity">
+    tools:context=".quiz.QuizActivity">
 
     <TextView
-        android:padding="24dp"
+        android:id="@+id/tv_quiz_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/bg_blue"
+        android:padding="24dp"
+        android:textColor="@color/black"
         tools:text="@string/hello" />
 
     <LinearLayout
@@ -20,13 +23,36 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/but_quiz_true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/but_quiz_true" />
 
         <Button
+            android:id="@+id/but_quiz_false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/but_quiz_false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/but_quiz_prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/arrow_left"
+            android:text="@string/but_quiz_prev" />
+
+        <Button
+            android:id="@+id/but_quiz_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/arrow_right"
+            android:drawableRight="@drawable/bg_gray"
+            android:text="@string/but_quiz_next" />
     </LinearLayout>
 </LinearLayout>

@@ -11,6 +11,7 @@ import com.lee.jeson316.mydemo.activites.DesignAvtivity;
 import com.lee.jeson316.mydemo.activites.SearchViewActivity;
 import com.lee.jeson316.mydemo.expand.ExpandActivity;
 import com.lee.jeson316.mydemo.okhttpdemo.OkhttpDemoActivity;
+import com.lee.jeson316.mydemo.quiz.QuizActivity;
 import com.lee.jeson316.mydemo.rxjavademo.RxJavaAvtivity;
 import com.lee.jeson316.mydemo.savestatus.StatusStoryActivity;
 import com.lee.jeson316.mydemo.showmessage.ShowMessageActivity;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         addButView("Okhttp", OkhttpDemoActivity.createInstance(this));
         addButView("SearchView", SearchViewActivity.createInstance(this));
         addButView("StatusSave", StatusStoryActivity.createInstance(this));
+        addButView("Quiz", QuizActivity.createInstance(this));
 //        addButView("Design", DesignAvtivity.createInstance(this));
     }
 
